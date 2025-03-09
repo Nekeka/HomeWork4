@@ -7,6 +7,11 @@ using System.Threading.Tasks;
 
 namespace HomeWork4
 {
+    /// <summary>
+    /// class has an implementation of mathematical operations between matrices
+    /// MATRICES MUST BE OF THE SAME SIZE
+    /// matrix dimension check is intentionally omitted, because: lazy
+    /// </summary>
     internal class Matrix
     {
         private double[,] A;
@@ -31,8 +36,9 @@ namespace HomeWork4
             this.size = size;
             
         }
+        //нужно чтобы не вызывать метод по заполнению матрицы рандомом
         private Matrix(int size, bool empty) { A = new double[size, size]; this.size = size; }
-        //
+        
         private Matrix() => A = new double[size, size];
         public void Print()
         {
