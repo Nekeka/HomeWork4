@@ -39,7 +39,6 @@ namespace HomeWork4
         //нужно чтобы не вызывать метод по заполнению матрицы рандомом
         private Matrix(int size, bool empty) { A = new double[size, size]; this.size = size; }
         
-        private Matrix() => A = new double[size, size];
         public void Print()
         {
             for (int i = 0; i < size; i++)
