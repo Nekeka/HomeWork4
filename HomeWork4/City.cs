@@ -12,11 +12,11 @@ namespace HomeWork4
 
         public int Citizens { get => _citizens; set => _citizens = value; }
 
-        public static City operator +(int count, City city) => new(city.Citizens + count);
+        public static City operator +(City city, int count) => new(city.Citizens + count);
 
         //public static City operator +(City city_1, City city_2) => new(city_1.Citizens + city_2.Citizens);
 
-        public static City operator -(int count, City city) => new(city.Citizens - count);
+        public static City operator -(City city, int count) => new(city.Citizens - count);
 
         //public static City operator -(City city_1, City city_2) => new(city_1.Citizens - city_2.Citizens);
 
@@ -29,5 +29,6 @@ namespace HomeWork4
         //public static bool operator !=(City city_1, int count) => !(city_1.Citizens != count);
         public static bool operator >(City city_1, int count) => (city_1.Citizens > count);
         public static bool operator <(City city_1, int count) => (city_1.Citizens < count);
+
     }
 }
